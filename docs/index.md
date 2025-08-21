@@ -2,7 +2,7 @@
 
 > 也许也是博客。
 
-📚[点击跳转到小说页](../Novel/README.md)
+📚[点击跳转到小说页](/Novel/README.md)
 
 ---
 
