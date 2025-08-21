@@ -2,7 +2,7 @@
 
 > 也许也是博客。
 
-📚[点击跳转到小说页](./Novel)
+📚[点击跳转到小说页](https://github.com/wujx3433/Novel)
 
 ---
 
