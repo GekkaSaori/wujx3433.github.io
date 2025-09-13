@@ -16,6 +16,16 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/wujx3433' },
       { icon: 'twitter', link: 'https://twitter.com/wujx3433' }
-    ]
+    ],
+    footer: {
+      message: 'Released under CC BY-NC-SA 4.0 License.',
+      copyright: 'Copyright © 2025 wujx3433 aka Zn.'
+    },
+    search: {
+      provider: 'local'
+    },
+    lastUpdated: true,
+    prev: false,
+    next: false
   }
 })

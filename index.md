@@ -9,12 +9,12 @@ hero:
   actions:
     - theme: brand
       text: 点击跳转到小说页
-      link: https://github.com/wujx3433/Novel
+      link: /novel-docs
     - theme: alt
       text: 点击跳转到博客页
       link: /blog-docs
   image:
-    src: https://raw.githubusercontent.com/wujx3433/wujx3433.github.io/refs/heads/main/Zn头像.png
+    src: /source/Zn头像.png
     alt: Zn头像
 
 ---
