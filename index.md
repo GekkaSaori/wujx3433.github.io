@@ -14,7 +14,7 @@ hero:
       text: 点击跳转到博客页
       link: /blog-docs
   image:
-    src: /Zn头像.png
+    src: https://raw.githubusercontent.com/wujx3433/wujx3433.github.io/refs/heads/main/Zn头像.png
     alt: Zn头像
 
 ---
