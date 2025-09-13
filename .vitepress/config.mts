@@ -4,11 +4,21 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "ZnP锌小屋",
   description: "A place to put down my spirits.",
+  locales: {
+    root: {
+      label: 'Chinese',
+      lang: 'zh-CN'
+    }
+  },
+  lastUpdated: true,
+  prev: false,
+  next: false,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
       { text: '小说', link: '/novel-docs' },
+      { text: '通联日志', link: '/ham-log' },
       { text: '博客', link: '/blog-docs' },
       { text: '友情链接', link: '/friends' },
       { text: '本项目', link: 'https://github.com/wujx3433/wujx3433.github.io' }
@@ -24,8 +34,6 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
-    lastUpdated: true,
-    prev: false,
-    next: false
   }
-})
+}
+)

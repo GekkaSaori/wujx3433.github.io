@@ -13,9 +13,20 @@ hero:
     - theme: alt
       text: 点击跳转到博客页
       link: /blog-docs
+    - theme: alt
+      text: 点击跳转到通联日志
+      link: /ham-log
   image:
-    src: /source/Zn头像.png
+    src: /Zn头像.png
     alt: Zn头像
+
+features:
+  - icon: 🛳️
+    title: 一座心灵的港湾
+    details: 在这里可以喝喝茶、喝喝咖啡，将人生设置一个存档点，然后再出发。
+  - icon: 🥰
+    title: 一间旅途驿站
+    details: 这里温暖又舒适，有让好朋友们都能休息的超多客房，美食与饮品管够！
 
 ---
 # ZnP锌小屋
@@ -29,8 +40,9 @@ Zn（又名 ZnP），常用用户名 **wujx3433**。
 
 ## 🛠️ 技能与专长
 
+- 喜欢游玩**maimai でらっくす**，目前成绩![](https://dxrating.luoling.moe/api/genImage/wujx3433)
 - 没有信息学竞赛经历，但略懂 C++
-- 曾任某 MCN 机构，了解带货与切片剪辑
+- 曾就职于某 MCN 机构，了解短视频带货与切片剪辑
 - 持有业余无线电操作证书与执照，呼号 **BG4KAD**
 - 音乐创作与改编，熟悉乐理、宿主软件、混音及 VOCALOID
 

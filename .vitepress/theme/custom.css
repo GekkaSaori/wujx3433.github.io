@@ -1,0 +1,28 @@
+/* 针对 frontmatter 设置的页面 */
+.wide-page .VPDoc {
+  max-width: 1800px; /* 内层正文 */
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.wide-page .vp-doc {
+  max-width: 1800px; /* 内层正文 */
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.wide-page .VPContent {
+  max-width: 1800px;
+}
+.wide-page .theme-default-content {
+  max-width: 1800px;
+}
+.wide-page .container {
+  max-width: 1800px;
+}
+.wide-page .content {
+  max-width: 1800px;
+}
+.wide-page .content-container {
+  max-width: 1800px;
+}

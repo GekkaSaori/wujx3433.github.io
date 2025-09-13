@@ -23,5 +23,8 @@
   "keywords": [],
   "devDependencies": {
     "vitepress": "^1.6.4"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^5.4.149"
   }
 }
