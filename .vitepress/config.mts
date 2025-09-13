@@ -13,17 +13,6 @@ export default defineConfig({
       { text: '友情链接', link: '/friends' },
       { text: '本项目', link: 'https://github.com/wujx3433/wujx3433.github.io' }
     ],
-
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/wujx3433' },
       { icon: 'twitter', link: 'https://twitter.com/wujx3433' }
