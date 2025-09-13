@@ -1,0 +1,64 @@
+# Linux/Unix
+lost+found/
+
+# TeX
+*.aux
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.log
+
+# Backup files
+*~
+# Swap files
+*.swp
+*.swo
+
+# macOS
+.AppleDouble
+.LSOverride
+.DS_Store
+
+# System files
+Icon?
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.env
+*.venv
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Logs
+*.log
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Others
+.env
+*.swp
+*.bak
+*.tmp

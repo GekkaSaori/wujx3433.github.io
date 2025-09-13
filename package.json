@@ -1,0 +1,27 @@
+{
+  "name": "wujx3433.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/wujx3433/wujx3433.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/wujx3433/wujx3433.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wujx3433/wujx3433.github.io.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
