@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, watch, nextTick } from "vue";
+import { shallowRef, ref, onMounted, watch, nextTick } from "vue";
 import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs'; // 使用 legacy 版本
 
 const props = defineProps({
@@ -8,8 +8,8 @@ const props = defineProps({
   pdfjsVersion: { type: String, default: "5.4.149" }, // 当前版本
 });
 
-const canvasRef = ref<HTMLCanvasElement | null>(null);
-const pdfDoc = ref<any>(null);
+const canvasRef = shallowRef<HTMLCanvasElement | null>(null);
+const pdfDoc = shallowRef<any>(null);
 const pageNum = ref(1);
 const pageCount = ref(0);
 const error = ref<string | null>(null);
@@ -22,16 +22,28 @@ async function renderPage(num: number) {
   }
   try {
     const page = await pdfDoc.value.getPage(num);
-    const viewport = page.getViewport({ scale: typeof props.scale === 'string' ? parseFloat(props.scale) : props.scale });
+    //const viewport = page.getViewport({ scale: typeof props.scale === 'string' ? parseFloat(props.scale) : props.scale });
+    const scale = 1.0;
+    const viewport = page.getViewport({ scale });
+    const outputScale = window.devicePixelRatio || 1;
     const canvas = canvasRef.value;
     const context = canvas.getContext("2d");
     if (!context) {
       error.value = "Failed to get 2D context for canvas";
       return;
     }
-    canvas.height = viewport.height;
-    canvas.width = viewport.width;
-    await page.render({ canvasContext: context, viewport }).promise;
+    canvas.width = Math.floor(viewport.width * outputScale);
+    canvas.height = Math.floor(viewport.height * outputScale);
+    canvas.style.width = Math.floor(viewport.width) + "px";
+    canvas.style.height = Math.floor(viewport.height) + "px";
+    const transform = outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : null;
+    //await page.render({ canvasContext: context, viewport, transform }).promise;
+    const renderContext = {
+    canvasContext: context,
+    transform,
+    viewport,
+  };
+  page.render(renderContext);
     error.value = null;
   } catch (err) {
     error.value = "Error rendering page: " + err.message;
@@ -94,9 +106,9 @@ watch(() => props.url, async (newUrl, oldUrl) => {
 <template>
   <div class="pdf-viewer">
     <client-only>
+      <canvas ref="canvasRef"></canvas>
       <div v-if="!pdfDoc && !error">加载 PDF 中...</div>
       <div v-else-if="error" class="error">加载 PDF 失败: {{ error }}</div>
-      <canvas v-else ref="canvasRef"></canvas>
     </client-only>
     <div class="controls" v-if="pdfDoc">
       <button @click="prevPage" :disabled="pageNum <= 1">上一页</button>
