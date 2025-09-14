@@ -3,8 +3,9 @@ import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
-import BackToTop from '../components/BackToTop.vue'
 import './custom.css'
+import BackToTop from '../components/BackToTop.vue'
+import PdfViewer from '../components/PdfViewer.vue'
 
 export default {
   extends: DefaultTheme,
@@ -14,7 +15,7 @@ export default {
       'layout-bottom': () => h(BackToTop)  // 回到顶部
     })
   },
-  enhanceApp({ app, router, siteData }) {
-    // ...
+  enhanceApp({ app }) {
+    app.component('PdfViewer', PdfViewer);
   }
 } satisfies Theme
