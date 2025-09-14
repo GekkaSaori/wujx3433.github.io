@@ -22,9 +22,11 @@
   },
   "keywords": [],
   "devDependencies": {
+    "gulp": "^5.0.1",
     "vitepress": "^1.6.4"
   },
   "dependencies": {
+    "@vueuse/core": "^9.13.0",
     "pdfjs-dist": "^5.4.149",
     "vue": "^3.5.21"
   }

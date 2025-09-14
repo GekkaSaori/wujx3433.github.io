@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { ref, onMounted, watch } from "vue";
+import { ref, onMounted, watch, nextTick } from "vue";
+import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs'; // 使用 legacy 版本
 
 const props = defineProps({
-  url: { type: String, required: true },
-  scale: { type: Number, default: 1 },
-  pdfjsVersion: { type: String, default: "4.0.379" }, // 稳定版本
+  url: { type: String, required: true }, // PDF 文件路径
+  scale: { type: [Number, String], default: 1 }, // 接受 Number 或 String
+  pdfjsVersion: { type: String, default: "5.4.149" }, // 当前版本
 });
 
 const canvasRef = ref<HTMLCanvasElement | null>(null);
@@ -13,47 +14,15 @@ const pageNum = ref(1);
 const pageCount = ref(0);
 const error = ref<string | null>(null);
 
-let pdfjsLib: any = null;
-
-async function loadPdfJs() {
-  if (pdfjsLib) {
-    console.log("PDF.js already loaded");
-    return pdfjsLib;
-  }
-  try {
-    console.log("Loading PDF.js script...");
-    await new Promise<void>((resolve, reject) => {
-      const script = document.createElement("script");
-      script.src = `/pdfjs/pdf.min.js`; // 使用本地文件
-      script.onload = () => {
-        console.log("PDF.js script loaded");
-        resolve();
-      };
-      script.onerror = () => reject(new Error("Failed to load PDF.js script"));
-      document.head.appendChild(script);
-    });
-    pdfjsLib = (window as any).pdfjsLib;
-    if (!pdfjsLib) {
-      throw new Error("pdfjsLib is not defined after loading script");
-    }
-    console.log("Setting workerSrc...");
-    pdfjsLib.GlobalWorkerOptions.workerSrc = `/pdfjs/pdf.worker.min.js`;
-    console.log("PDF.js initialized successfully");
-    return pdfjsLib;
-  } catch (err) {
-    console.error("Error in loadPdfJs:", err);
-    throw new Error("Error loading PDF.js: " + err.message);
-  }
-}
-
 async function renderPage(num: number) {
+  console.log("Rendering page", num, "pdfDoc:", !!pdfDoc.value, "canvas:", !!canvasRef.value);
   if (!pdfDoc.value || !canvasRef.value) {
     error.value = "PDF document or canvas is not available";
     return;
   }
   try {
     const page = await pdfDoc.value.getPage(num);
-    const viewport = page.getViewport({ scale: props.scale });
+    const viewport = page.getViewport({ scale: typeof props.scale === 'string' ? parseFloat(props.scale) : props.scale });
     const canvas = canvasRef.value;
     const context = canvas.getContext("2d");
     if (!context) {
@@ -76,15 +45,18 @@ async function loadPdf() {
       error.value = "PDF URL is empty or invalid";
       return;
     }
-    console.log("Loading PDF from:", props.url);
-    const pdfjsLib = await loadPdfJs();
-    pdfDoc.value = await pdfjsLib.getDocument(props.url).promise;
+    console.log("Attempting to load PDF from:", props.url);
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "/pdfjs/pdf.worker.mjs";
+    const loadingTask = pdfjsLib.getDocument(props.url);
+    console.log("Loading task created:", loadingTask);
+    pdfDoc.value = await loadingTask.promise;
+    console.log("PDF document loaded, pages:", pdfDoc.value.numPages, "pdfDoc.value:", pdfDoc.value);
     pageCount.value = pdfDoc.value.numPages;
     pageNum.value = 1;
     error.value = null;
     await renderPage(pageNum.value);
   } catch (err) {
-    error.value = "Error loading PDF: " + err.message;
+    error.value = "Error loading PDF: " + (err.message || 'Unknown error');
     console.error("Error in loadPdf:", err);
   }
 }
@@ -101,7 +73,12 @@ function prevPage() {
   renderPage(pageNum.value);
 }
 
-onMounted(loadPdf);
+onMounted(async () => {
+  console.log("Component mounted, canvasRef:", !!canvasRef.value);
+  await nextTick();
+  console.log("DOM ready, canvasRef:", !!canvasRef.value);
+  await loadPdf();
+});
 
 watch(() => props.url, async (newUrl, oldUrl) => {
   if (newUrl !== oldUrl) {
@@ -116,9 +93,11 @@ watch(() => props.url, async (newUrl, oldUrl) => {
 
 <template>
   <div class="pdf-viewer">
-    <div v-if="!pdfDoc && !error">加载 PDF 中...</div>
-    <div v-else-if="error" class="error">加载 PDF 失败: {{ error }}</div>
-    <canvas v-else ref="canvasRef"></canvas>
+    <client-only>
+      <div v-if="!pdfDoc && !error">加载 PDF 中...</div>
+      <div v-else-if="error" class="error">加载 PDF 失败: {{ error }}</div>
+      <canvas v-else ref="canvasRef"></canvas>
+    </client-only>
     <div class="controls" v-if="pdfDoc">
       <button @click="prevPage" :disabled="pageNum <= 1">上一页</button>
       <span>第 {{ pageNum }}/{{ pageCount }} 页</span>

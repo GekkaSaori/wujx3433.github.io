@@ -1,6 +1,5 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from 'vitepress';
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "ZnP锌小屋",
   description: "A place to put down my spirits.",
@@ -14,7 +13,6 @@ export default defineConfig({
   prev: false,
   next: false,
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
       { text: '小说', link: '/novel-docs' },
@@ -34,6 +32,5 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
-  }
-}
-)
+  },
+});
