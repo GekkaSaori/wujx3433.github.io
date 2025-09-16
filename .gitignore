@@ -1,4 +1,5 @@
 node_modules
+.vscode
 .vitepress/cache
 .vitepress/dist
 .DS_Store
