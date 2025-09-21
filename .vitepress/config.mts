@@ -9,6 +9,8 @@ export default defineConfig({
       lang: 'zh-CN'
     }
   },
+  head: [['link', { rel: 'icon', href: '/favicon.ico' }]]
+  },
   ignoreDeadLinks: true,
   lastUpdated: true,
   prev: false,
