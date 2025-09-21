@@ -9,6 +9,7 @@ export default defineConfig({
       lang: 'zh-CN'
     }
   },
+  ignoreDeadLinks: true,
   lastUpdated: true,
   prev: false,
   next: false,
