@@ -40,6 +40,8 @@ Zn（又名 ZnP），常用用户名 **wujx3433**。
 
 创作小说，制作字幕，听音乐，读书，看电影。
 
+有点精神病，病程长，状态较为稳定（大概）。
+
 
 ## 🛠️ 技能与专长
 
@@ -81,3 +83,4 @@ zetaraku的音乐游戏曲库 [arcade-songs.zetaraku.dev](https://arcade-songs.z
 
 落雪查分器 [maimai.lxns.net](https://maimai.lxns.net)
 
+Fandom maimai wiki，可以查牌子区域等收藏品[maimai.fandom.com](https://maimai.fandom.com/zh/wiki/Maimai中文_维基)
