@@ -2,11 +2,20 @@
 layout: doc
 ---
 
+![](/header_image.png)
+
 # 自用网站的书签
 
+- 全国音游地图 [map.bemanicn.com](https://map.bemanicn.com)
 - zetaraku的音乐游戏曲库，包含街机游戏的段位考核表 [arcade-songs.zetaraku.dev](https://arcade-songs.zetaraku.dev)
 - 水鱼diving-fish的工具，包括查分器和定数表等 [www.diving-fish.com](https://www.diving-fish.com)
 - 落雪查分器 [maimai.lxns.net](https://maimai.lxns.net)
 - Fandom maimai wiki，可以查牌子区域等收藏品 [maimai.fandom.com](https://maimai.fandom.com/zh/wiki/Maimai中文_维基)
 - 站长工具之ping连通性测试 [ping.chinaz.com](https://ping.chinaz.com)
 - 某拍拍机的加速盒子控制台 [turbo.sys-allnet.com](https://turbo.sys-allnet.com)
+- mtf wiki，整理汇总女性倾向跨性别的相关资料 [mtf.wiki](https://mtf.wiki)
+- 青衫ASD，为神经多元群体提供支持 [qingshanasd.cn](https://qingshanasd.cn)
+- 额我略圣咏库 [gregobase.selapa.net](https://gregobase.selapa.net)
+- 人造卫星过境查询 [www.n2yo.com](https://www.n2yo.com)
+- 某张大饼的控制台 [u.otogame.net](https://u.otogame.net)
+- MuNet的控制台 [portal.mumur.net](https://portal.mumur.net)
