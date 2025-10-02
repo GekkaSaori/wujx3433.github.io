@@ -63,6 +63,14 @@ const members = [
         { icon: { svg: '🔗' }, link: 'https://estela.moe'}
     ]
   },
+    {
+    avatar: 'https://avatars.githubusercontent.com/u/28506229',
+    name: 'CrystalPb',
+    title: 'Pb是我翻车的导火索（？）',
+    links: [
+        { icon: 'github', link: 'https://github.com/SkyCrystal'},
+    ]
+  },
 ]
 </script>
 
