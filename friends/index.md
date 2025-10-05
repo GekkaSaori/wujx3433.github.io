@@ -71,6 +71,17 @@ const members = [
         { icon: 'github', link: 'https://github.com/SkyCrystal'},
     ]
   },
+   {
+    avatar: 'https://avatars.githubusercontent.com/u/23723294',
+    name: 'Cryolitia',
+    title: '新的老朋友^_^',
+    links: [
+        { icon: 'github', link: 'https://github.com/Cryolitia'},
+        { icon: { svg: '🔗' }, link: 'cryolitia.beiyan.us'}
+    ]
+
+
+  },
 ]
 </script>
 
