@@ -11,6 +11,7 @@ export default defineConfig({
   },
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   ignoreDeadLinks: true,
+  outline: [2, 6],
   lastUpdated: true,
   prev: false,
   next: false,
