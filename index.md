@@ -73,6 +73,14 @@ Zn（又名 ZnP），常用用户名 **wujx3433**。
   <img src="https://raw.githubusercontent.com/wujx3433/wujx3433/refs/heads/main/Source/Zn刻板印象.png" width="400px" />
 </p>
 
+## 许可协议与著作权
+
+Copyright © 2018 - 2025 wujx3433 aka Zn.
+
+在无额外说明的情况下，本仓库内所有由wujx3433创作的作品，在转载时均需要遵循[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)（即署名-非商业性使用-相同方式共享）协议。
+
+![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)
+
 ## 
 
 <u>🏳️‍🌈🏳️‍⚧️</u>[🔖](./bookmark.md)<u>🐈🍥</u>

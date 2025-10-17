@@ -6,6 +6,14 @@ layout: doc
 
 这里开始写我的博客。我以前是没有这个习惯的，不过我在某个时间段突然意识到，我的脑子并不能帮我记住我踩过的所有坑，就当是一个涂涂写写的笔记本啦。
 
+## 许可协议与著作权
+
+Copyright © 2018 - 2025 wujx3433 aka Zn.
+
+在无额外说明的情况下，本仓库内所有由wujx3433创作的作品，在转载时均需要遵循[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)（即署名-非商业性使用-相同方式共享）协议。
+
+![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)
+
 ## 导航
 
 ### Oct 2025
