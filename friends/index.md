@@ -22,7 +22,7 @@ const members = [
   {
     avatar: 'https://avatars.githubusercontent.com/u/18461360',
     name: '凌莞~(=^▽^=)',
-    title: '曾经一起在MtF.wiki共事，现在在使用她开发的MuNet',
+    title: 'MuNet!',
     links: [
         { icon: 'github', link: 'https://github.com/clansty'},
         { icon: { svg: '🔗' }, link: 'https://nyac.at'}
