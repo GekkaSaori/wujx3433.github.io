@@ -26,7 +26,8 @@ export default defineConfig({
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/wujx3433' },
-      { icon: 'twitter', link: 'https://twitter.com/wujx3433' }
+      { icon: 'twitter', link: 'https://twitter.com/wujx3433' },
+      { icon: 'bilibili', link: 'https://space.bilibili.com/7619378' }
     ],
     footer: {
       message: 'Released under CC BY-NC-SA 4.0 License.',
