@@ -9,7 +9,21 @@ export default defineConfig({
       lang: 'zh-CN'
     }
   },
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { 
+      rel: 'stylesheet', 
+      href: 'https://fonts.googleapis.com/css2?family=Long+Cang&display=swap' 
+    }],
+    ['link', { 
+      rel: 'stylesheet', 
+      href: 'https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap' 
+    }],
+    ['link', { 
+      rel: 'stylesheet', 
+      href: 'https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+SC&display=swap' 
+    }]
+  ],
   ignoreDeadLinks: true,
   outline: [2, 6],
   lastUpdated: true,
