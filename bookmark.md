@@ -2,7 +2,7 @@
 layout: doc
 ---
 
-![](/header_image.png)
+<img src='/header_image.png' alt='苏半夏' loading='lazy' /><br>
 
 Illustration from **恋爱绮谭~不存在的夏天~** by **莲ki**.
 
