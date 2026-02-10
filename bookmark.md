@@ -4,6 +4,10 @@ layout: doc
 
 ![](/header_image.png)
 
+Illustration from **恋爱绮谭~不存在的夏天~** by **莲ki**.
+
+Copyright © 2020 **Never Knows Best**. All rights reserved.
+
 # 自用网站的书签
 
 - 全国音游地图 [map.bemanicn.com](https://map.bemanicn.com)

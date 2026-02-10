@@ -86,11 +86,29 @@ Zn（又名 ZnP），常用用户名 **wujx3433**。
 
 ## 许可协议与著作权
 
-Copyright © 2018 - 2025 wujx3433 aka Zn.
+Copyright © 2018 - 2026 wujx3433 aka Zn. 
+
+All rights reserved.
 
 在无额外说明的情况下，本仓库内所有由wujx3433创作的作品，在转载时均需要遵循[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)（即署名-非商业性使用-相同方式共享）协议。
 
 ![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)
+
+### 第三方素材版权声明
+
+#### ZnP的头像及人设图
+
+Copyright © **[ゆゆ](https://www.pixiv.net/users/68864)**. 
+
+All rights reserved. 
+
+No reproduction, modification, or redistribution.
+
+#### 苏半夏形象图
+
+Copyright © **[蓮キ](https://www.pixiv.net/users/2551555)** & **Never Knows Best**. 
+
+All rights reserved.
 
 ## 
 
