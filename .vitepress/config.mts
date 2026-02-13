@@ -22,6 +22,10 @@ export default defineConfig({
     ['link', { 
       rel: 'stylesheet', 
       href: 'https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+SC&display=swap' 
+    }],
+    ['link', { 
+      rel: 'stylesheet', 
+      href: 'https://fonts.googleapis.com/css2?family=LXGW+Marker+Gothic&display=swap' 
     }]
   ],
   ignoreDeadLinks: true,
