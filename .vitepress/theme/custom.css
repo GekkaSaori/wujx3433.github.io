@@ -26,3 +26,12 @@
 .wide-page .content-container {
   max-width: 1800px;
 }
+
+/* 爱发电打赏组件 - 暗黑模式适配（全局生效） */
+html.dark .afdian-donate-container {
+  border-color: #333;
+  background-color: #222;
+}
+html.dark .afdian-donate-container .donate-tip {
+  color: #ddd;
+}
