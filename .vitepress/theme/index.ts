@@ -7,6 +7,7 @@ import './custom.css'
 import 'katex/dist/katex.min.css'
 import BackToTop from '../components/BackToTop.vue'
 // import PdfViewer from '../components/PdfViewer.vue'
+import Donate from '../components/Donate.vue'
 import { defineAsyncComponent } from 'vue'
 
 // 懒加载 LaTeXRenderer 组件
@@ -48,5 +49,6 @@ export default {
   enhanceApp({ app }) {
     app.component('PdfViewer', PdfViewer);
     app.component('LaTeXRenderer', LaTeXRenderer);
+    app.component('Donate', Donate);
   },
 } satisfies Theme
