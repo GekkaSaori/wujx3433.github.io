@@ -25,3 +25,4 @@ Copyright © 2020 **Never Knows Best**. All rights reserved.
 - 某张大饼的控制台 [u.otogame.net](https://u.otogame.net)
 - MuNet的控制台 [portal.mumur.net](https://portal.mumur.net)
 - 舞萌DX网络还好吗？ [status.awmc.cc/status/maimai](https://status.awmc.cc/status/maimai)
+- 一个好用的配色网站 [farbvelo.elastiq.ch](https://farbvelo.elastiq.ch/)

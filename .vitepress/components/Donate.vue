@@ -126,5 +126,5 @@ const props = defineProps({
     font-size: 14px;
   }
 }
-
+/* 暗黑模式适配在.vitepress/theme/custom.css里 */
 </style>
