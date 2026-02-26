@@ -24,5 +24,6 @@ Copyright © 2020 **Never Knows Best**. All rights reserved.
 - 人造卫星过境查询 [www.n2yo.com](https://www.n2yo.com)
 - 某张大饼的控制台 [u.otogame.net](https://u.otogame.net)
 - MuNet的控制台 [portal.mumur.net](https://portal.mumur.net)
+- RinNET的控制台 [portal.naominet.live](https://portal.naominet.live)
 - 舞萌DX网络还好吗？ [status.awmc.cc/status/maimai](https://status.awmc.cc/status/maimai)
 - 一个好用的配色网站 [farbvelo.elastiq.ch](https://farbvelo.elastiq.ch/)
