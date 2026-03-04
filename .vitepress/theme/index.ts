@@ -42,10 +42,10 @@ export default {
   extends: DefaultTheme,
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      'layout-bottom': () => h(BackToTop)  // 回到顶部
+      'layout-bottom': () => h(BackToTop)
     })
   },
+
   enhanceApp({ app }) {
     app.component('PdfViewer', PdfViewer);
     app.component('LaTeXRenderer', LaTeXRenderer);

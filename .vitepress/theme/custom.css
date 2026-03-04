@@ -35,3 +35,16 @@ html.dark .afdian-donate-container {
 html.dark .afdian-donate-container .donate-tip {
   color: #ddd;
 }
+
+/*示亡符*/
+.dead {
+  display: inline-block;
+  padding: 0 2px;
+  border: 1px solid currentColor;
+  margin: 0 1px;
+  line-height: 1.2;
+}
+
+html.dark .dead {
+  border-color: #ddd;
+}
