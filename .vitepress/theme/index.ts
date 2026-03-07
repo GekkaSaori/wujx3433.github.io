@@ -9,6 +9,7 @@ import BackToTop from '../components/BackToTop.vue'
 // import PdfViewer from '../components/PdfViewer.vue'
 import Donate from '../components/Donate.vue'
 import { defineAsyncComponent } from 'vue'
+import Vertical from '../components/Vertical.vue'
 
 // 懒加载 LaTeXRenderer 组件
 const LaTeXRenderer = defineAsyncComponent({
@@ -42,7 +43,7 @@ export default {
   extends: DefaultTheme,
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
-      'layout-bottom': () => h(BackToTop)
+      'layout-bottom': () => h(BackToTop),
     })
   },
 
@@ -50,5 +51,6 @@ export default {
     app.component('PdfViewer', PdfViewer);
     app.component('LaTeXRenderer', LaTeXRenderer);
     app.component('Donate', Donate);
+    app.component('Vertical', Vertical);
   },
 } satisfies Theme

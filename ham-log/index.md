@@ -1,7 +1,15 @@
 ---
 aside: false
-layoutClass: wide-page
+layout: doc
 ---
+<style>
+    .container{
+        max-width: 2000px !important;
+    }
+    .content{
+        max-width: 2000px !important;
+    }
+</style>
 
 # BG4KAD 的通联日志
 
@@ -14,4 +22,4 @@ layoutClass: wide-page
 |5|0438 23 Nov 2024|1238|BG5CDQ|14.27MHz, USB|100W|OM86LL|宁波，浙江|59|57|
 |6|1230 28 Jan 2025|2030|BI4IR|FM, RPT|5W|黄家巷，诸城，山东|繁荣路，诸城，山东|57|57|
 |7|1924 4 Oct 2025|0321|BI7BST|FM, RPT|5W|和谐广场，济南，山东|OM86KQ|59|59|
-|8|0954 7 Oct 2025|1754|BA4JBN|FM, RPT|5W|泰山区，泰安，山东|OM85KX|59|59|
+|8|0954 7 Oct 2025|1754|BA4JBN|FM, RPT|5W|OM85KX|泰山，泰安，山东|59|59|
