@@ -29,7 +29,7 @@ export default defineConfig({
     }],
       ['link', { 
       rel: 'stylesheet', 
-      href: 'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap' 
+      href: 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap' 
     }],
   ],
   ignoreDeadLinks: true,
