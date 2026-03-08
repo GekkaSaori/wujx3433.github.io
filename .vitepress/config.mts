@@ -27,10 +27,6 @@ export default defineConfig({
       rel: 'stylesheet', 
       href: 'https://fonts.googleapis.com/css2?family=LXGW+Marker+Gothic&display=swap' 
     }],
-      ['link', { 
-      rel: 'stylesheet', 
-      href: 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap' 
-    }],
   ],
   ignoreDeadLinks: true,
   outline: [2, 6],
