@@ -2,15 +2,16 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+import './fonts.css'
 import './style.css'
 import './custom.css'
-import './noto-serif-sc-mod.css'
 import 'katex/dist/katex.min.css'
 import BackToTop from '../components/BackToTop.vue'
 // import PdfViewer from '../components/PdfViewer.vue'
 import Donate from '../components/Donate.vue'
 import { defineAsyncComponent } from 'vue'
 import Vertical from '../components/Vertical.vue'
+//import '../components/Vertical.js'
 
 // 懒加载 LaTeXRenderer 组件
 const LaTeXRenderer = defineAsyncComponent({

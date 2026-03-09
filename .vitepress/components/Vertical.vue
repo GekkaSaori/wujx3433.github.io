@@ -23,6 +23,47 @@ import { Content } from 'vitepress';
   margin-block: 1em;
 }
 
+.vertical-layout-container br {
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 0.8em;
+  margin-inline: 0.2em;
+  height: 1em;
+  width: auto;
+}
+
+.vertical-layout-container blockquote {
+  /* 重置默认样式（消除浏览器默认的margin/padding/border） */
+  margin: 0;
+  padding: 0;
+  border: none;
+  quotes: none; /* 取消默认引号样式，自定义中式竖排引号 */
+  
+  /* 竖排核心布局：适配 vertical-rl */
+  display: block;
+  /* 竖排下的“左右缩进”（inline方向），比普通文本更靠内，突出引用层级 */
+  margin-inline: 1em 0.5em;
+  /* 竖排下的“上下间距”（block方向），保持紧凑 */
+  margin-block: 0.8em;
+  /* 内边距：适配竖排阅读，避免文字贴边框 */
+  padding-inline: 1.2em;
+  padding-block: 0.6em;
+  
+  /* 中式竖排引用视觉特征：下边框（对应横排左侧边框）+ 浅底色 */
+  border-block-end: 2px solid rgba(236, 120, 166, 0.3); /* 浅棕褐色边框，贴合书页质感 */
+  background-color: rgba(249, 247, 243, 0.6); /* 比书页底色稍深一点，区分引用区域 */
+  border-radius: 2px; /* 轻微圆角，和书页风格统一 */
+  
+  /* 字体/行高：保持和正文一致，突出层级但不突兀 */
+  font-family: inherit; /* 继承容器字体（Noto Serif/Noto Sans CJK SC） */
+  line-height: inherit;
+  letter-spacing: inherit;
+  
+  /* 禁止引用块跨列（翻页时保持完整） */
+  break-inside: avoid;
+}
+
 .vertical-layout-container h1{
   line-height: 2em;
   font-weight: 800;
@@ -81,7 +122,8 @@ import { Content } from 'vitepress';
   overflow-x: auto; 
   overflow-y: auto; 
   font-family: "Noto Serif SC", serif;
-  font-feature-settings: "vert" on, "vrt2" on;
+  /*字体opentype特性：竖排优化，等宽数字*/
+  font-feature-settings: "vert" on, "vrt2" on, "thum" on;
   font-optical-sizing: auto;
   writing-mode: vertical-rl; /* 核心：从右到左竖排（中文传统） */
   text-orientation: mixed; /* 文字直立，不旋转 */
@@ -119,7 +161,7 @@ import { Content } from 'vitepress';
 /* 暗黑模式适配在custom.css里 */
 
 /* 移动端适配：缩小间距，适配小屏幕 */
-@media (max-width: 768px) {
+@media (max-width: auto) {
   .vertical-layout-container {
     padding: 10px 0;
     line-height: 1.6;
@@ -128,10 +170,21 @@ import { Content } from 'vitepress';
     column-gap: 2em;
     max-height: calc(100vh - 150px); /* 减少导航栏高度占比 */
   }
+  .vertical-layout-container br{
+    line-height: 0.6em;
+    margin-inline: 0.1em;
+  }
   .vertical-layout-container p {
     margin-inline-start: 0.8em;
     margin-inline-end: 0.8em;
     padding-inline-start: 1.5em; /* 移动端空两格缩小 */
+  }
+  .vertical-layout-container blockquote {
+    margin-inline: 0.6em 0.3em;
+    margin-block: 0.6em;
+    padding-inline: 0.8em;
+    padding-block: 0.4em;
+    border-block-end-width: 1px; /* 移动端边框稍细 */
   }
 }
 </style>
