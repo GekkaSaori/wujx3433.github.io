@@ -10,35 +10,7 @@ import { Content } from 'vitepress';
 </template>
 
 <style>
-@font-face {
-  font-family: "Noto Sans Serif SC";
-  src: url(https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap);
-}
-@font-face {
-  font-family: "Noto Sans Serif TC";
-  src: url(https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap);
-}
 
-/* 1. 标点符号：繁体中文字形 + 不旋转 */
-@font-face {
-  font-family: punctuation;
-  src: local('Noto Sans Serif TC');
-  unicode-range: u+3000-303F, u+FF00-FFEF;
-}
-/* 2. 英文/数字（ASCII）：简体中文字形 + 竖排旋转 */
-@font-face {
-  src: local('Noto Sans Serif SC');
-  unicode-range: u+0020-007F; /* 基本ASCII：英文、数字、半角符号 */
-  font-family: alphabetnum; /* 简体字形字体 */
-  text-orientation: mixed; /* 英文/数字旋转（符合竖排标准） */
-}
-/* 3. 中文主文本：简体中文字形 + 直立不旋转 */
-@font-face {
-  src: local('Noto Sans Serif SC');
-  unicode-range: u+4E00-9FFF, u+F900-FAFF; /* CJK汉字 */
-  font-family: CJK; /* 简体字形字体 */
-  text-orientation: mixed; /* 汉字直立不旋转 */
-}
 /* 竖排段落适配：取消默认 margin，调整间距 */
 .vertical-layout-container p {
   margin: 0;
@@ -46,7 +18,7 @@ import { Content } from 'vitepress';
   margin-inline-end: 0.4em;
   white-space: normal;
   padding-inline-start: 2em; /*另起一行空两格*/
-  break-inside: avoid;
+  /* break-inside: avoid;*/
   line-height: 1.5em;
   margin-block: 1em;
 }
@@ -57,7 +29,7 @@ import { Content } from 'vitepress';
   font-size: 38px;
   margin-inline-start: 12px;
   letter-spacing: 0.4em;
-  break-inside: avoid; /* 禁止标题跨列 */
+  /* break-inside: avoid; /* 禁止标题跨列 */
 }
 
 .vertical-layout-container h2{
@@ -66,7 +38,7 @@ import { Content } from 'vitepress';
   font-size: 28px;
   margin-inline-start: 12px;
   letter-spacing: 5px;
-  break-inside: avoid; /* 禁止标题跨列 */
+  /* break-inside: avoid; /* 禁止标题跨列 */
 }
 
 .vertical-layout-container h3{
@@ -75,7 +47,7 @@ import { Content } from 'vitepress';
   font-size: 24px;
   margin-inline-start: 12px;
   letter-spacing: 5px;
-  break-inside: avoid; /* 禁止标题跨列 */
+  /* break-inside: avoid; /* 禁止标题跨列 */
 }
 
 .vertical-layout-container h4{
@@ -84,7 +56,7 @@ import { Content } from 'vitepress';
   font-size: 20px;
   margin-inline-start: 12px;
   letter-spacing: 5px;
-  break-inside: avoid; /* 禁止标题跨列 */
+  /* break-inside: avoid; /* 禁止标题跨列 */
 }
 
 .vertical-layout-container h5{
@@ -93,7 +65,7 @@ import { Content } from 'vitepress';
   font-size: 18px;
   margin-inline-start: 12px;
   letter-spacing: 5px;
-  break-inside: avoid; /* 禁止标题跨列 */
+  /* break-inside: avoid; /* 禁止标题跨列 */
 }
 
 /* 竖排布局容器：覆盖整个文档内容区域 */
@@ -105,10 +77,10 @@ import { Content } from 'vitepress';
   column-gap: 2em;
   column-fill: auto;
   white-space: normal;
-  word-break: keep-all;
+  word-break: normal;
   overflow-x: auto; 
   overflow-y: auto; 
-  font-family: punctuation, alphabetnum, CJK, serif;
+  font-family: "Noto Serif SC", serif;
   font-feature-settings: "vert" on, "vrt2" on;
   font-optical-sizing: auto;
   writing-mode: vertical-rl; /* 核心：从右到左竖排（中文传统） */
@@ -128,6 +100,7 @@ import { Content } from 'vitepress';
   /* 容器内边距，让内容不贴边 */
   padding-inline: 1em;
   border-radius: 4px; /* 轻微圆角，更柔和 */
+  break-inside: avoid;
 }
 
 /*单页底色*/
