@@ -1,5 +1,6 @@
 ---
 layout: Vertical
+title: 测试页面
 ---
 # h1
 
@@ -10,6 +11,32 @@ layout: Vertical
 #### h4
 
 ##### h5
+
+> This is a quote.
+>
+> This is line tow of quote.
+
+> 这是引用段。
+>
+> 这是引用第二段。
+
+|This|is|a|tabular|
+|---|---|---|---|
+|The|quick|brown|fox|
+|jumps|over|a|lazy|
+|dog.||||
+|微风迎客|软语伴茶|中国智造|慧及全球|
+|我能吞下玻璃|而不伤身体|春江潮水连海平|海上明月共潮生|
+
+《长恨歌》作者：<span class="dead">白居易</span>
+
+竖排版不支持LaTeXRenderer，换句话说不支持katex。
+
+---
+
+字体基线测试：ABCDEFGabcdefg一二三四五六七
+
+---
 
 # 我见新天新地
 
@@ -79,7 +106,7 @@ X市（2022）刑字第0173号
 
 询问地点：X市公安局YY分局治安大队2询问室
 
-询问人：杨×× 沈x
+询问人：杨×× 沈×
 
 被询问人：楚××（死者母亲）
 
@@ -353,4 +380,3 @@ X市精神卫生中心门（急）诊病例
 
 因为旧世界已过去，一切都更新了。
 
-> This is a quote.

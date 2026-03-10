@@ -1,6 +1,22 @@
 <script setup lang="ts">
 import { Content } from 'vitepress';
+import { onMounted } from 'vue';
 
+/*横排引号转换为竖排引号*/
+onMounted(() => {
+  var divList = ['p', 'h1', 'h2', 'h3', 'h4', 'h5']
+  var replaceList = ['“', '『', '”', '』', '‘ ', '「', '’', '」'];
+  for(var i = 0; i < divList.length; ++i) {
+      var selectedDiv = document.querySelector('.vertical-layout-container')!.querySelectorAll(divList[i]);
+      for(var j = 0; j < selectedDiv.length; ++j) {
+          var str = selectedDiv[j].innerHTML;
+          for(var k = 0; k < replaceList.length; k += 2) {
+              str = str.replaceAll(replaceList[k], replaceList[k + 1]);
+          }
+          selectedDiv[j].innerHTML = str;
+      }
+  }
+});
 </script>
 
 <template>
@@ -64,6 +80,54 @@ import { Content } from 'vitepress';
   break-inside: avoid;
 }
 
+.vertical-layout-container table {
+    /* 重置默认表格样式 */
+  border-collapse: collapse; /* 合并边框，避免双线条 */
+  border-spacing: 0;
+  width: auto; /* 自适应内容宽度，不撑满容器 */
+  margin: 1em auto; /* 竖排下居中，上下间距适配书页 */
+  /* 竖排核心：表格整体跟随容器竖排，但单元格内文字保持易读 */
+  writing-mode: vertical-rl;
+  /* 禁止表格跨列（翻页时保持完整） */
+  break-inside: avoid;
+  /* 书页风格边框：浅棕底色+细边框 */
+  border: 1px solid rgba(150, 120, 80, 0.2);
+  background-color: rgba(249, 247, 243, 0.8);
+  border-radius: 4px; /* 和书页风格统一的圆角 */
+}
+
+/* 表头单元格 */
+.vertical-layout-container th {
+  /* 重置默认样式 */
+  padding: 0.6em 0.4em; /* 竖排下内边距：上下（inline）小，左右（block）稍大 */
+  margin: 0;
+  /* 表头视觉区分：深一点的底色+加粗 */
+  background-color: rgba(150, 120, 80, 0.1);
+  font-weight: 700;
+  text-align: center; /* 竖排下文字居中 */
+  /* 表头边框：细边框，贴合书页 */
+  border: 1px solid rgba(150, 120, 80, 0.2);
+  /* 表头文字不旋转，保持直立 */
+  text-orientation: mixed;
+}
+
+/* 内容单元格 */
+.vertical-layout-container td {
+  /* 重置默认样式 */
+  padding: 0.5em 0.4em; /* 比表头稍紧凑 */
+  margin: 0;
+  text-align: center; /* 竖排下文字居中（可改为left/right） */
+  /* 内容边框：和表头一致 */
+  border: 1px solid rgba(150, 120, 80, 0.2);
+  /* 文字直立，避免旋转导致阅读困难 */
+  text-orientation: mixed;
+}
+
+/* 表格行hover效果（增强交互） */
+.vertical-layout-container tr:hover td {
+  background-color: rgba(150, 120, 80, 0.05);
+}
+
 .vertical-layout-container h1{
   line-height: 2em;
   font-weight: 800;
@@ -121,7 +185,7 @@ import { Content } from 'vitepress';
   word-break: normal;
   overflow-x: auto; 
   overflow-y: auto; 
-  font-family: "Noto Serif SC", serif;
+  font-family: "Noto Serif SC", "Source Han Serif CN VF", serif;
   /*字体opentype特性：竖排优化，等宽数字*/
   font-feature-settings: "vert" on, "vrt2" on, "thum" on;
   font-optical-sizing: auto;
@@ -185,6 +249,21 @@ import { Content } from 'vitepress';
     padding-inline: 0.8em;
     padding-block: 0.4em;
     border-block-end-width: 1px; /* 移动端边框稍细 */
+  }
+    .vertical-layout-container table {
+    /* 移动端表格允许横向滚动，避免挤压 */
+    display: block;
+    overflow-x: auto;
+    /* 缩小间距，适配小屏 */
+    margin: 0.8em auto;
+  }
+  .vertical-layout-container th {
+    padding: 0.4em 0.3em;
+    font-size: 0.9em;
+  }
+  .vertical-layout-container td {
+    padding: 0.3em 0.2em;
+    font-size: 0.9em;
   }
 }
 </style>

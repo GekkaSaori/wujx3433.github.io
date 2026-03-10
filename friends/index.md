@@ -1,7 +1,18 @@
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
+import { XSVG, linkSVG } from '/.vitepress/theme/icons.ts';
 
 const members = [
+    {
+    avatar: 'https://avatars.githubusercontent.com/u/32533580',
+    name: 'wujx3433 aka Zn',
+    title: '我自己',
+    links: [
+      { icon: 'github', link: 'https://github.com/wujx3433' },
+      { icon: 'bilibili', link: 'https://space.bilibili.com/7619378'},
+      { icon: { svg: XSVG }, link: 'https://x.com/wujx3433'}
+    ]
+  },
   {
     avatar: 'https://avatars.githubusercontent.com/u/19746684',
     name: 'Gekka Saori',
@@ -11,12 +22,21 @@ const members = [
     ]
   },
   {
+    avatar: 'https://avatars.githubusercontent.com/u/132185099',
+    name: '冬瓜',
+    title: '可爱冬瓜',
+    links: [
+      { icon: 'github', link: 'https://github.com/dongguacute'},
+      { icon: { svg: XSVG }, link: 'https://x.com/Dongguacute'}
+    ]
+  },
+  {
     avatar: 'https://avatars.githubusercontent.com/u/54884471',
     name: 'Noa Virellia',
     title: '是最近认识的一位很可爱的孩子w',
     links: [
         { icon: 'github', link: 'https://github.com/AsterisMono'},
-        { icon: { svg: '🔗' }, link: 'https://noise.amono.me'}
+        { icon: { svg: linkSVG }, link: 'https://noise.amono.me'}
     ]
   },
   {
@@ -25,7 +45,7 @@ const members = [
     title: 'MuNet!',
     links: [
         { icon: 'github', link: 'https://github.com/clansty'},
-        { icon: { svg: '🔗' }, link: 'https://nyac.at'}
+        { icon: { svg: linkSVG }, link: 'https://nyac.at'}
     ]
   },
   {
@@ -42,7 +62,7 @@ const members = [
     title: '哇！是C10s大佬！',
     links: [
         { icon: 'github', link: 'https://github.com/CoelacanthusHex'},
-        { icon: { svg: '🔗' }, link: 'https://blog.coelacanthus.moe'}
+        { icon: { svg: linkSVG }, link: 'https://blog.coelacanthus.moe'}
     ]
   },
     {
@@ -51,7 +71,7 @@ const members = [
     title: 'Menci Meow Cat owo',
     links: [
         { icon: 'github', link: 'https://github.com/Menci'},
-        { icon: { svg: '🔗' }, link: 'https://men.ci'}
+        { icon: { svg: linkSVG }, link: 'https://men.ci'}
     ]
   },
     {
@@ -60,7 +80,7 @@ const members = [
     title: '山前大姐姐！',
     links: [
         { icon: 'github', link: 'https://github.com/saeziae'},
-        { icon: { svg: '🔗' }, link: 'https://estela.moe'}
+        { icon: { svg: linkSVG }, link: 'https://estela.moe'}
     ]
   },
     {
@@ -77,7 +97,7 @@ const members = [
     title: '新的老朋友^_^',
     links: [
         { icon: 'github', link: 'https://github.com/Cryolitia'},
-        { icon: { svg: '🔗' }, link: 'cryolitia.beiyan.us'}
+        { icon: { svg: linkSVG }, link: 'cryolitia.beiyan.us'}
     ]
 
 

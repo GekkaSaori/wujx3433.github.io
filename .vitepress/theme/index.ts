@@ -1,5 +1,5 @@
 // https://vitepress.dev/guide/custom-theme
-import { h } from 'vue'
+import { defineComponent, h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './fonts.css'
@@ -11,7 +11,7 @@ import BackToTop from '../components/BackToTop.vue'
 import Donate from '../components/Donate.vue'
 import { defineAsyncComponent } from 'vue'
 import Vertical from '../components/Vertical.vue'
-//import '../components/Vertical.js'
+
 
 // 懒加载 LaTeXRenderer 组件
 const LaTeXRenderer = defineAsyncComponent({
@@ -53,6 +53,6 @@ export default {
     app.component('PdfViewer', PdfViewer);
     app.component('LaTeXRenderer', LaTeXRenderer);
     app.component('Donate', Donate);
-    app.component('Vertical', Vertical);
+    app.component('Vertical', Vertical)
   },
 } satisfies Theme
